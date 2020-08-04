@@ -6,7 +6,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;

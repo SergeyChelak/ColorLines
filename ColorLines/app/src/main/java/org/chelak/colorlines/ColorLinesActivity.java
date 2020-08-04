@@ -1,8 +1,9 @@
 package org.chelak.colorlines;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.widget.DrawerLayout;
+import androidx.annotation.NonNull;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +18,7 @@ public class ColorLinesActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.color_lines_activity);
-        final DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+        final DrawerLayout drawerLayout = findViewById(R.id.drawerLayout);
         {
             drawerLayout.setDrawerListener(new DrawerLayout.DrawerListener() {
                 @Override
@@ -62,8 +63,8 @@ public class ColorLinesActivity extends BaseActivity {
 
             @Override
             public void onMenuSelected() {
-                if (!drawerLayout.isDrawerVisible(Gravity.START))
-                    drawerLayout.openDrawer(Gravity.START);
+                if (!drawerLayout.isDrawerVisible(GravityCompat.START))
+                    drawerLayout.openDrawer(GravityCompat.START);
             }
         });
 
@@ -77,20 +78,20 @@ public class ColorLinesActivity extends BaseActivity {
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (drawerLayout.isDrawerVisible(Gravity.START)) {
-                        drawerLayout.closeDrawer(Gravity.START);
+                    if (drawerLayout.isDrawerVisible(GravityCompat.START)) {
+                        drawerLayout.closeDrawer(GravityCompat.START);
                     }
                     gameBoard.onButtonModeClick(button);
                 }
             });
         }
 
-        ImageButton btn = (ImageButton) findViewById(R.id.btnFacebook);
+        ImageButton btn = findViewById(R.id.btnFacebook);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (drawerLayout.isDrawerVisible(Gravity.START)) {
-                    drawerLayout.closeDrawer(Gravity.START);
+                if (drawerLayout.isDrawerVisible(GravityCompat.START)) {
+                    drawerLayout.closeDrawer(GravityCompat.START);
                 }
                 GameOverDialog.openFacebookPublic(ColorLinesActivity.this);
             }
