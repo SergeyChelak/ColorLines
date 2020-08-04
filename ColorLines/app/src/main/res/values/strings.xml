@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Color Balls</string>
+    <string name="game_mode_lines">Lines</string>
+    <string name="game_mode_rings">Rings</string>
+    <string name="game_mode_squares">Squares</string>
+
+    <string name="current_scores">Scores:</string>
+    <string name="best_scores">Best:</string>
+
+    <string name="dialog_new_lines">Would you like to start new Lines game?</string>
+    <string name="dialog_new_squares">Would you like to start new Squares game?</string>
+    <string name="dialog_new_rings">Would you like to start new Rings game?</string>
+
+    <string name="no_way">There is no way</string>
+    <string name="no_way_teleport">There is no way. You can use teleportation</string>
+    <string name="game_over_scores">Your score is</string>
+
+    <string name="url_public_facebook">https://www.facebook.com/groups/tinyboardgames</string>
+
+</resources>
