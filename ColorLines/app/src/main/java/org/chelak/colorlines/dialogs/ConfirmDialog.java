@@ -49,7 +49,7 @@ public class ConfirmDialog extends BaseDialog {
         //txt.setTypeface(font);
         txt.setText(message);
 
-        ImageButton btnYes = (ImageButton) view.findViewById(R.id.btnYes);
+        ImageButton btnYes = view.findViewById(R.id.btnYes);
         btnYes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,7 +59,7 @@ public class ConfirmDialog extends BaseDialog {
             }
         });
 
-        ImageButton btnNo = (ImageButton) view.findViewById(R.id.btnNo);
+        ImageButton btnNo = view.findViewById(R.id.btnNo);
         btnNo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

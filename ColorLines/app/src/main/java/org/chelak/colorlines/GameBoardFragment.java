@@ -144,21 +144,21 @@ public class GameBoardFragment extends BaseFragment {
         {
             View view = getFragmentView();
             // action buttons
-            ImageButton btnUndo = (ImageButton) view.findViewById(R.id.buttonUndo);
+            ImageButton btnUndo = view.findViewById(R.id.buttonUndo);
             btnUndo.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     logic.popUndo();
                 }
             });
-            ImageButton btnTeleport = (ImageButton) view.findViewById(R.id.buttonTeleport);
+            ImageButton btnTeleport = view.findViewById(R.id.buttonTeleport);
             btnTeleport.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     updateTeleportMode(!isTeleportMode);
                 }
             });
-            ImageButton btnMenu = (ImageButton) view.findViewById(R.id.buttonMenu);
+            ImageButton btnMenu = view.findViewById(R.id.buttonMenu);
             btnMenu.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -188,7 +188,7 @@ public class GameBoardFragment extends BaseFragment {
     }
 
     private void updateTeleportMode(boolean value) {
-        ImageButton btnTeleport = (ImageButton) getFragmentView().findViewById(R.id.buttonTeleport);
+        ImageButton btnTeleport = getFragmentView().findViewById(R.id.buttonTeleport);
         isTeleportMode = value;
         btnTeleport.setSelected(isTeleportMode);
     }
@@ -276,7 +276,7 @@ public class GameBoardFragment extends BaseFragment {
 
             @Override
             public void onTeleportCountUpdated(int value) {
-                ImageButton btnTeleport = (ImageButton) getFragmentView().findViewById(R.id.buttonTeleport);
+                ImageButton btnTeleport = getFragmentView().findViewById(R.id.buttonTeleport);
                 btnTeleport.setEnabled(value > 0);
             }
 
@@ -302,7 +302,7 @@ public class GameBoardFragment extends BaseFragment {
 
             @Override
             public void onUndoStateChanged(boolean isAllowed) {
-                ImageButton btnUndo = (ImageButton) getFragmentView().findViewById(R.id.buttonUndo);
+                ImageButton btnUndo = getFragmentView().findViewById(R.id.buttonUndo);
                 btnUndo.setEnabled(isAllowed);
                 invalidateBoard();
             }
@@ -344,12 +344,12 @@ public class GameBoardFragment extends BaseFragment {
         int value = logic.getScores();
         View view = getFragmentView();
         {
-            TextView scores = (TextView) view.findViewById(R.id.scoresText);
+            TextView scores = view.findViewById(R.id.scoresText);
             scores.setText(String.valueOf(value));
         }
         {
             int bestScores = getBestScores();
-            TextView textView = (TextView) view.findViewById(R.id.bestScoresText);
+            TextView textView = view.findViewById(R.id.bestScoresText);
             textView.setText(String.valueOf(bestScores));
         }
     }

@@ -6,10 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Point;
 import android.graphics.drawable.BitmapDrawable;
-import android.os.Bundle;
 import android.view.Display;
-
-import org.chelak.colorlines.R;
 
 /**
  * Created by sergey.chelak on 14.01.16.

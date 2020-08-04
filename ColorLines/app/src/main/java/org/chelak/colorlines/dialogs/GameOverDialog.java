@@ -52,29 +52,19 @@ public class GameOverDialog extends BaseDialog {
 
     @Override
     protected void setupView(View view) {
-        TextView textView = (TextView) view.findViewById(R.id.textScores);
+        TextView textView = view.findViewById(R.id.textScores);
         textView.setText(String.valueOf(scores));
 
-        ImageView imageView = (ImageView) view.findViewById(R.id.imageTitle);
+        ImageView imageView = view.findViewById(R.id.imageTitle);
         imageView.setImageResource(isWin ? R.drawable.logo_best : R.drawable.logo_normal);
 
-        ImageButton btnRestart = (ImageButton) view.findViewById(R.id.btnNewGame);
+        ImageButton btnRestart = view.findViewById(R.id.btnNewGame);
         btnRestart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 GameOverDialog.this.dismiss();
             }
         });
-/*
-        ImageView btnFacebook = (ImageButton) view.findViewById(R.id.btnFacebook);
-        btnFacebook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                GameOverDialog.this.dismiss();
-                openFacebookPublic(getActivity());
-            }
-        });
-*/
     }
 
     public void setListener(GameOverDialogListener listener) {

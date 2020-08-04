@@ -48,7 +48,7 @@ public class WayFinder extends Board {
             for (Location step : steps) {
                 if (step.equals(to))
                     return front;
-                Location waveFronts[] = getWaveFronts(step.getX(), step.getY());
+                Location[] waveFronts = getWaveFronts(step.getX(), step.getY());
                 for (Location location : waveFronts)
                     if (isValidRange(location) && get(location) == 0) {
                         set(location, front+1);
@@ -70,7 +70,7 @@ public class WayFinder extends Board {
         while (currentFront != 1) {
             steps.add(currentLocation);
             boolean isStepFound = false;
-            Location waveFronts[] = getWaveFronts(currentLocation.getX(), currentLocation.getY());
+            Location[] waveFronts = getWaveFronts(currentLocation.getX(), currentLocation.getY());
             for (Location wfLocation : waveFronts)
                 if (isValidRange(wfLocation)) {
                     int waveFront = getValue(wfLocation);
